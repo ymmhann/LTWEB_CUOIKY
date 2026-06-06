@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2026 at 07:12 PM
+-- Generation Time: Jun 06, 2026 at 01:26 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tmdt1`
+-- Database: `quanlythucung`
 --
 
 -- --------------------------------------------------------
@@ -198,6 +198,18 @@ INSERT INTO `coupons` (`id`, `name`, `discount`, `type`, `discount_max`, `number
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `orders`
 --
 
@@ -247,14 +259,19 @@ INSERT INTO `orders` (`id`, `note`, `user_id`, `address`, `phone`, `payment_type
 (83063265847631095, NULL, 5, 'None', '0942011546', 'MOMO', 'CANCEL', '2026-06-01 09:20:31', '2026-06-02 15:10:15', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', '{\"partnerCode\":\"MOMOBKUN20180529\",\"orderId\":\"83063265847631095\",\"requestId\":\"1780305631\",\"amount\":\"23020000\",\"orderInfo\":\"Thanh to\\u00e1n qua MoMo cho shop KimHoangMobile \\u0111\\u01a1n h\\u00e0ng [83063265847631095]\",\"orderType\":\"momo_wallet\",\"transId\":\"1780305639978\",\"resultCode\":\"1006\",\"message\":\"Giao d\\u1ecbch b\\u1ecb t\\u1eeb ch\\u1ed1i b\\u1edfi ng\\u01b0\\u1eddi d\\u00f9ng.\",\"payType\":null,\"responseTime\":\"1780305640070\",\"extraData\":null,\"signature\":\"00a679401996b57c2591270e1e5a49e2198e0538e42417d410b442545e1baed7\"}', NULL, NULL, NULL, NULL, NULL, 1, 20000),
 (96148351357980416, NULL, 5, 'None', '0942011546', 'MOMO', 'CANCEL', '2026-06-01 09:19:46', '2026-06-02 15:10:54', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
 (97895115104590263, NULL, 5, 'None', '0942011546', 'MOMO', 'CANCEL', '2026-06-02 08:29:03', '2026-06-02 15:09:45', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 3, 100000),
+(102861945114141928, NULL, NULL, '23 Nguyễn Trãi', '0474738333', 'COD', 'PENDING', '2026-06-04 16:25:28', '2026-06-04 16:25:28', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, 4, 15000, 8, 20000),
 (113018898304951300, 'ghfj', 1, 'nnnnnn', '0987654322', 'COD', 'SUCCESS', '2024-04-03 14:10:25', '2024-04-03 14:12:31', 'nnnnnn nnnnnn', 'nnnnnn@gmail.com', 'PAID', NULL, '2024-04-03', 'gh', '87867876', NULL, NULL, 1, 123),
 (113240447384362452, NULL, 5, 'None', '0942011546', 'MOMO', 'CANCEL', '2026-06-02 08:28:31', '2026-06-02 15:09:59', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 3, 100000),
 (118191957299803724, NULL, 2, 'tphcm q12', '0987654321', 'MOMO', 'CANCEL', '2024-04-05 05:49:32', '2026-06-02 15:11:30', 'muoi hoa', 'hoahuongduong05124@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, 1, 500000, 1, 20000),
+(120928497004119000, NULL, 5, '23 Nguyễn Trãi', '0865443886', 'MOMO', 'PENDING', '2026-06-06 09:05:48', '2026-06-06 09:05:48', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', '{\"partnerCode\":\"MOMOBKUN20180529\",\"orderId\":\"120928497004119000\",\"requestId\":\"1780736748\",\"amount\":\"22000\",\"orderInfo\":\"Thanh to\\u00e1n qua MoMo cho shop JinJin Pet Food \\u0111\\u01a1n h\\u00e0ng [120928497004119000]\",\"orderType\":\"momo_wallet\",\"transId\":\"1780736817698\",\"resultCode\":\"1006\",\"message\":\"Giao d\\u1ecbch b\\u1ecb t\\u1eeb ch\\u1ed1i b\\u1edfi ng\\u01b0\\u1eddi d\\u00f9ng.\",\"payType\":null,\"responseTime\":\"1780736817739\",\"extraData\":null,\"signature\":\"8aad8afda7acc128e2b6776fda9ced801bad6ef43c0aafdca44cc65036a7f1fd\"}', NULL, NULL, NULL, 4, 15000, 5, 12000),
 (126557272833216440, NULL, 7, '23 Nguyễn Trãi', '0384882244', 'COD', 'PENDING', '2026-06-02 16:55:52', '2026-06-02 16:55:52', 'Phạm Thanh Lân', 'phamthanhlan22071973@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, 4, 15000, 11, 25000),
+(136653583505059698, NULL, NULL, '23 Nguyễn Trãi', '0865443886', 'COD', 'CONFIRMED', '2026-06-04 16:24:33', '2026-06-05 17:41:13', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 8, 20000),
 (156917464414594236, NULL, 5, 'None', '0942011546', 'MOMO', 'CANCEL', '2026-06-01 09:19:48', '2026-06-02 15:10:45', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
 (162175202220213756, NULL, 5, 'None', '0942011546', 'MOMO', 'CANCEL', '2026-06-01 09:17:56', '2026-06-02 15:11:15', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 3, 100000),
-(173456946007460580, NULL, 5, 'xxxx', '0942011546', 'MOMO', 'PENDING', '2026-06-02 16:38:50', '2026-06-02 16:38:50', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', '{\"partnerCode\":\"MOMOBKUN20180529\",\"orderId\":\"173456946007460580\",\"requestId\":\"1780418330\",\"amount\":\"74000\",\"orderInfo\":\"Thanh to\\u00e1n qua MoMo cho shop JinJin Pet Food \\u0111\\u01a1n h\\u00e0ng [173456946007460580]\",\"orderType\":\"momo_wallet\",\"transId\":\"1780418339418\",\"resultCode\":\"1006\",\"message\":\"Giao d\\u1ecbch b\\u1ecb t\\u1eeb ch\\u1ed1i b\\u1edfi ng\\u01b0\\u1eddi d\\u00f9ng.\",\"payType\":null,\"responseTime\":\"1780418339545\",\"extraData\":null,\"signature\":\"e1091527863c2f049adbc788ce3b9ffbf01fa112773bcc2a6cec050c1f39cb60\"}', NULL, NULL, NULL, 4, 10000, 5, 12000),
+(172126001539585236, NULL, NULL, '23 Nguyễn Trãi', '0384882244', 'COD', 'PENDING', '2026-06-04 16:23:27', '2026-06-04 16:23:27', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, 2, 5000, 8, 20000),
+(173456946007460580, NULL, 5, 'xxxx', '0942011546', 'MOMO', 'PENDING', '2026-06-02 16:38:50', '2026-06-02 16:38:50', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'PAID', '{\"orderId\":\"173456946007460580\",\"payType\":\"MOMO\"}', NULL, NULL, NULL, 4, 10000, 5, 12000),
 (174081425668155945, NULL, 5, 'None', '0942011546', 'MOMO', 'CANCEL', '2026-06-02 08:27:45', '2026-06-02 15:10:07', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(176738942715465400, NULL, 5, '23 Nguyễn Trãi', '0473735284', 'COD', 'PENDING', '2026-06-06 09:03:20', NULL, 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 5, 12000),
 (176920308092103788, NULL, 5, '167 Chùa Bộc, P.Trung Liệt, Q.Đống Đa, Hà Nội', '0865443886', 'COD', 'SUCCESS', '2026-06-02 16:44:46', '2026-06-02 16:47:23', 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', 'PAID', NULL, '2026-06-02', NULL, NULL, 4, 10000, 5, 12000);
 
 -- --------------------------------------------------------
@@ -290,9 +307,11 @@ INSERT INTO `order_products` (`product_id`, `order_id`, `quantity`, `price`) VAL
 (2, 118191957299803724, 1, 23000000),
 (2, 126557272833216440, 1, 72000),
 (2, 162175202220213756, 1, 23000000),
+(2, 172126001539585236, 1, 72000),
 (2, 173456946007460580, 1, 72000),
 (2, 174081425668155945, 5, 23000000),
 (3, 48144348771642192, 1, 89999),
+(3, 136653583505059698, 1, 45000),
 (4, 25221203430442300, 1, 12000000),
 (5, 25221203430442300, 1, 23000000),
 (6, 18809987755651290, 1, 7000000),
@@ -307,9 +326,12 @@ INSERT INTO `order_products` (`product_id`, `order_id`, `quantity`, `price`) VAL
 (6, 176920308092103788, 1, 46000),
 (7, 30238449159401763, 1, 50000),
 (7, 62778431417524715, 3, 9000000),
+(7, 102861945114141928, 1, 50000),
+(7, 176738942715465400, 1, 50000),
 (9, 97895115104590263, 4, 59000),
 (14, 72102737856394140, 1, 25000),
 (17, 72102737856394140, 1, 25000),
+(17, 120928497004119000, 1, 25000),
 (20, 176920308092103788, 1, 258000),
 (24, 126557272833216440, 1, 171000),
 (33, 30238449159401763, 1, 498000),
@@ -511,10 +533,11 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `address`, `phone`, `sta
 (1, 'democode', 'democode@gmail.com', '$2y$10$7IzXHVrwoMKmHTG1oSn6SefRHfUFPLReCJhB1rF/57zuyJBiC7W9C', NULL, NULL, 0, NULL, '2024-04-03 14:04:54', '2024-04-05 04:27:01'),
 (2, 'muoi hoa', 'hoahuongduong05124@gmail.com', '$2y$10$FES778pFdRWe6zzotgsLGeS5rGKSu5sxgSoT/Er0SMHULGj8r5OnC', NULL, NULL, 1, 'FF7kgbDJnWeK6VwGyyNDzjJdgpiLp3N6LKLEYUEdTkmavESVaI10bIrzOnfC', '2024-04-05 04:06:04', '2024-04-05 04:22:50'),
 (3, 'abcdef', 'abcdef@gmail.com', '$2y$10$IH.CzGgFmp1g8EdBgdEFEuBAZQd9uhuXqHTS9UnCC1eR10iUOA.2u', NULL, NULL, 1, NULL, '2026-01-23 09:58:54', '2026-01-23 09:58:54'),
-(4, 'BuiThaiHoc', 'BuiThaiHoc@gmail.com', '$2y$10$mjXot5jSPr6NlrZtBFVRF.kxPoI8q.S5GOpwdu5yOQgNvviSU949y', NULL, NULL, 1, NULL, '2026-05-27 06:02:11', '2026-05-27 06:02:11'),
-(5, 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', '$2y$10$prc63abNAel0aTC7bttMte3POeJkDWkFKKQpfPxAS9iuNbHMJBZoy', NULL, NULL, 1, 'F1Ktf6wZWFT4JsqSlLjUF90I4gBu8nXW2nbEfCxUcwn8Cy8RAHZTTq1gUDLa', '2026-05-30 09:32:23', '2026-06-01 09:22:19'),
-(6, 'Phạm Anh Thư', 'anhthu0207xt@gmail.com', '', NULL, NULL, 1, 'RKqvysrAyrO7iaANoFSflCWpf1rvWuir8Tu1lrOwW4enmIE9MRZsS5w7amOi', '2026-06-02 16:51:46', '2026-06-02 16:51:46'),
-(7, 'Phạm Thanh Lân', 'phamthanhlan22071973@gmail.com', '', NULL, NULL, 1, 'EyqH25hjtVxnGEiJsIQLLu1HSq3RONs530v4LBgYLHzl6ZdlzFOgXoy1ECAp', '2026-06-02 16:54:50', '2026-06-02 16:54:50');
+(4, 'BuiThaiHoc', 'BuiThaiHoc@gmail.com', '$2y$10$mjXot5jSPr6NlrZtBFVRF.kxPoI8q.S5GOpwdu5yOQgNvviSU949y', NULL, NULL, 0, NULL, '2026-05-27 06:02:11', '2026-06-06 03:43:42'),
+(5, 'Nguyễn Thị Mỹ Hạnh', 'myhanhchelly@gmail.com', '$2y$10$prc63abNAel0aTC7bttMte3POeJkDWkFKKQpfPxAS9iuNbHMJBZoy', NULL, NULL, 1, '330wLqyprW0qph9ak5FXgvDBJMzpF58VfnaxVvAHMaw4AEZ4sT8Oyeg1e8fG', '2026-05-30 09:32:23', '2026-06-01 09:22:19'),
+(6, 'Phạm Anh Thư', 'anhthu0207xt@gmail.com', '', NULL, NULL, 0, '9NrFBxwByWXvr52kBOszduFzYVtVLN1H46clL1khMDF4gsvuxc0ksCoaYcU7', '2026-06-02 16:51:46', '2026-06-06 09:12:03'),
+(7, 'Phạm Thanh Lân', 'phamthanhlan22071973@gmail.com', '', NULL, NULL, 1, 'EyqH25hjtVxnGEiJsIQLLu1HSq3RONs530v4LBgYLHzl6ZdlzFOgXoy1ECAp', '2026-06-02 16:54:50', '2026-06-02 16:54:50'),
+(8, 'Học', 'hocbui27@gmail.com', '$2y$10$56UupAiaTvb6LkD46ueqlef20TuHl6UZ8qAo9J8aKKj9eoE3q8pN.', NULL, NULL, 1, NULL, '2026-06-06 09:46:46', '2026-06-06 09:46:46');
 
 -- --------------------------------------------------------
 
@@ -575,6 +598,12 @@ ALTER TABLE `city`
 -- Indexes for table `coupons`
 --
 ALTER TABLE `coupons`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `migrations`
+--
+ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -691,6 +720,12 @@ ALTER TABLE `coupons`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
@@ -724,7 +759,7 @@ ALTER TABLE `product_images`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
